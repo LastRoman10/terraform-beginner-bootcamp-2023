@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if grep -q "alias tf='terraform'" ~/.bash_profile; then
+    echo "The alias 'tf' already exists in the ~/.bash_profile."
+else
+    echo "alias tf='terraform'" >> ~/.bash_profile
+    source ~/.bash_profile
+fi
+
